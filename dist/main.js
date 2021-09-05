@@ -680,8 +680,6 @@ anime.timeline({loop: true})
     delay: 1000
   });
 
-
-
 getScore();  
 getRaiderHistory();
 getTopRaiderScore();
