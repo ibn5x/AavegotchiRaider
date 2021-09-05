@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Raider</title>
+
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  
+	  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    
+    <link rel="stylesheet" href="app.css">
+    <link rel="icon" href="assets/player.png" type="image/gif" sizes="16x16">
+</head>
+<body>
+
+    <nav class="menu navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="index.html"><b>Aavegotchi Raiders!</b></a>
+        <div class="navbar-collapse collapse justify-content-end">
+          <div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="myRaider.html">My Raider</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="topRaiders.html">Top Raider</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">My Aavegotchi</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary"  id="btn-login"  style="margin-right:5px;"aria-disabled="true">connect with Metamask</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary"  id="btn-logout"  aria-disabled="true">logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <div class="promo">
+        <div class="container">
+          <div class="banner">
+            <h5 class="display-4">Aavegotchi Raiders!<h5></h5>
+               <p>How many in-game assets can you get before the Avegotchi get you!</p>
+            <br>
+            <button class="btn btn-primary btn-homepage" onclick='tipDevs()'>Tip Developers</button>
+          </div>
+        </div>
+    </div>
+  
+      
+  <br><br>
+
+  <img src="./assets/aavegotchiRaider.png" alt=""> <span>
+    <table class="table table-dark table-striped table-bordered table-hover table-sm table-responsive"  style="width: 500px;">
+        <caption>Your Raid History! <span><small>see Top Raiders top 10.</small></span></caption>
+        
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">User Address</th>
+            <th scope="col">Score</th>
+            <th scope="col">Board level</th>
+            <th scope="col">Aavegotchi Anger level</th>
+          </tr>
+        </thead>
+        <tbody id="historyTableData"></tbody>
+      </table>
+    <br>
+  </span>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
