@@ -13,11 +13,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ibn5x/AavegotchiRaider/issues"
-  },
-  "homepage": "https://ibn5x.github.io/AavegotchiRaider",,
+  "homepage": "https://ibn5x.github.io/AavegotchiRaider",
   "devDependencies": {
     "gh-pages": "^3.2.3"
   }
 }
+
+
