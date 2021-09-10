@@ -45,6 +45,17 @@ var x = document.getElementById("AaveAudio");
 var y = document.getElementById("AaveSend"); 
 var z = document.getElementById("AaveSuccess"); 
 
+async function init(){
+
+    Moralis.initPlugins();
+
+}
+
+function buyCrypto(){
+    playAudio();
+    Moralis.Plugins.fiat.buy();   
+}
+
 async function launch(){
     let user = Moralis.User.current();
     
@@ -680,6 +691,8 @@ anime.timeline({loop: true})
     delay: 1000
   });
 
+
+init();
 getScore();  
 getRaiderHistory();
 getTopRaiderScore();
@@ -690,6 +703,7 @@ stayTransparent();
 
 document.getElementById("btn-login").onclick = login;
 document.getElementById("btn-logout").onclick = logOut;  
+document.getElementById("btnBuy").onclick = buyCrypto;
 
 //Not Yet implemented 9/5/21 5:51AM - Mikal
 
