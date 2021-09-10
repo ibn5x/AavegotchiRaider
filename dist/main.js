@@ -51,10 +51,25 @@ async function init(){
 
 }
 
-function buyCrypto(){
+function buycrypto(){
     playAudio();
+    alert("this feature is for testing and is currently under development. Use at your own risk!");
     Moralis.Plugins.fiat.buy();   
 }
+
+async function iFiat(){
+    let result = await Moralis.Plugins.fiat.buy({}, {disableTriggers: true});
+
+    document.getElementById('myFrame').style.display = 'block';
+    document.getElementById('myFrame').src = result.result.data;
+}
+
+function closeWin()   // close iframe
+{
+var oldIframe = window.parent.document.getElementById('myFrame');
+someIframe.parentNode.removeChild(oldIframe);
+}
+
 
 async function launch(){
     let user = Moralis.User.current();
@@ -703,7 +718,7 @@ stayTransparent();
 
 document.getElementById("btn-login").onclick = login;
 document.getElementById("btn-logout").onclick = logOut;  
-document.getElementById("btnBuy").onclick = buyCrypto;
+document.getElementById("btnBuy").onclick = iFiat;
 
 //Not Yet implemented 9/5/21 5:51AM - Mikal
 

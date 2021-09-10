@@ -102,9 +102,10 @@
    Credits
   </button>
 
-  <button type="button" class="btn button_Nav"  id="btnBuy" style="margin-right: 10px; height: 8vh;" onclick="playAudio()"> 
+  <button type="button" class="btn button_Nav"  data-bs-toggle="modal" id="btnBuy" data-bs-target="#buyModal" style="margin-right: 10px; height: 8vh;" > 
     Buy Crypto
    </button>
+   
 
    <button type="button" class="btn button_Nav" data-bs-toggle="modal" id="btnMyRaider" data-bs-target="#raiderHistoricalModal"style="margin-right: 10px;height: 8vh;" onclick="playAudio()">
    My Raider
@@ -147,7 +148,9 @@
   </h1>
 
 </div>
- 
+
+
+
 <!--
 <table class="table table-dark table-striped table-bordered table-hover table-sm table-responsive" id="scoreTable" style="width: 500px;">
     <caption>Top 3 Aavegotchi Raiders! <span><small>see Top Raiders top 10.</small></span></caption>
@@ -527,6 +530,36 @@
     </div>
   </div>
 </div>
+
+<!-- buy crypto -->
+<div class="modal fade" id="buyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-ml">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"><img src="./assets/kek-fomo-fud-alpha.gif" alt="" height=30px; width=30px;>Experimental feature. Use at your own risk.</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="playAudio()"></button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; justify-content: center;">
+          <caption>
+            <div style="text-align: center;   width: 400px;">
+              <!--<input class="question" name="Close" type="button" value="x" onClick="closeWin()" tabindex="10" /> --> 
+              <iframe id="myFrame" src="" width="350" height="650" style="display:block"></iframe>
+            </div> 
+          </caption> 
+        </div>
+             
+        <br>
+        
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="playAudio()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <br>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
